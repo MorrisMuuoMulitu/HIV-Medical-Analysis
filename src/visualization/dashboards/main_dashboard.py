@@ -65,7 +65,7 @@ st.markdown("""
 
 
 @st.cache_data
-def load_data(n_patients=5000):
+def load_data(n_patients=1000):
     """Load or generate synthetic data."""
     generator = HIVDataGenerator()
     datasets = generator.generate_complete_dataset(n_patients=n_patients)
@@ -110,7 +110,7 @@ def main():
     
     st.sidebar.markdown("---")
     st.sidebar.markdown("### Data Settings")
-    n_patients = st.sidebar.slider("Number of Patients", 1000, 20000, 5000, 1000)
+    n_patients = st.sidebar.slider("Number of Patients", 1000, 20000, 1000, 1000)
     
     # Load data
     with st.spinner("Loading data..."):
